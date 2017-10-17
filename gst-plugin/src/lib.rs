@@ -9,6 +9,7 @@
 
 extern crate byteorder;
 extern crate gstreamer_base_sys as gst_base_ffi;
+extern crate gstreamer_video_sys as gst_video_ffi;
 #[macro_use]
 extern crate lazy_static;
 extern crate libc;
@@ -21,6 +22,9 @@ extern crate gstreamer_base as gst_base;
 pub extern crate glib;
 #[macro_use]
 pub extern crate gstreamer as gst;
+
+#[macro_use]
+pub extern crate gstreamer_video as gst_video;
 
 macro_rules! callback_guard {
     () => (
@@ -79,3 +83,7 @@ pub mod base_sink;
 #[macro_use]
 pub mod base_transform;
 pub mod uri_handler;
+
+#[macro_use]
+pub mod base_video_decoder;
+pub mod video_decoder;
